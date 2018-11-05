@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Program 11 ：四个数字排列组合多少种三位数", "Program 11 ：四个数字排列组合多少种三位数\Program 11 ：四个数字排列组合多少种三位数.vcxproj", "{9F7633B4-BFCB-4096-A726-9489D618497B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F7633B4-BFCB-4096-A726-9489D618497B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9F7633B4-BFCB-4096-A726-9489D618497B}.Debug|Win32.Build.0 = Debug|Win32
+		{9F7633B4-BFCB-4096-A726-9489D618497B}.Release|Win32.ActiveCfg = Release|Win32
+		{9F7633B4-BFCB-4096-A726-9489D618497B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
