@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Program 12：企业发放的奖金根据利润提成", "Program 12：企业发放的奖金根据利润提成\Program 12：企业发放的奖金根据利润提成.vcxproj", "{3717FA8C-967D-4A7A-AF54-0F00253F0E7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3717FA8C-967D-4A7A-AF54-0F00253F0E7E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3717FA8C-967D-4A7A-AF54-0F00253F0E7E}.Debug|Win32.Build.0 = Debug|Win32
+		{3717FA8C-967D-4A7A-AF54-0F00253F0E7E}.Release|Win32.ActiveCfg = Release|Win32
+		{3717FA8C-967D-4A7A-AF54-0F00253F0E7E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
