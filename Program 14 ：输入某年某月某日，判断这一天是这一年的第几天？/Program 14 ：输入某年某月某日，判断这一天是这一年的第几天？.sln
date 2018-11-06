@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Program 14 ：输入某年某月某日，判断这一天是这一年的第几天？", "Program 14 ：输入某年某月某日，判断这一天是这一年的第几天？\Program 14 ：输入某年某月某日，判断这一天是这一年的第几天？.vcxproj", "{1FB8AED1-9022-4BDE-939A-093A11B4DD0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FB8AED1-9022-4BDE-939A-093A11B4DD0B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1FB8AED1-9022-4BDE-939A-093A11B4DD0B}.Debug|Win32.Build.0 = Debug|Win32
+		{1FB8AED1-9022-4BDE-939A-093A11B4DD0B}.Release|Win32.ActiveCfg = Release|Win32
+		{1FB8AED1-9022-4BDE-939A-093A11B4DD0B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
