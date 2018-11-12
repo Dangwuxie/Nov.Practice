@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Program 26 ： 请输入星期几的第一个字母来判断一下是星期几", "Program 26 ： 请输入星期几的第一个字母来判断一下是星期几\Program 26 ： 请输入星期几的第一个字母来判断一下是星期几.vcxproj", "{CB657C2E-F68C-4EB5-9382-36AA0371BC78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB657C2E-F68C-4EB5-9382-36AA0371BC78}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CB657C2E-F68C-4EB5-9382-36AA0371BC78}.Debug|Win32.Build.0 = Debug|Win32
+		{CB657C2E-F68C-4EB5-9382-36AA0371BC78}.Release|Win32.ActiveCfg = Release|Win32
+		{CB657C2E-F68C-4EB5-9382-36AA0371BC78}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
