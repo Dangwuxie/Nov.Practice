@@ -93,6 +93,7 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)//¿
 	int x = 0;
 	int y = 0;
 	int win = 0;
+	int input = 0;
 	printf("ÇëÊäÈëÒª×ßµÄµÚÒ»¸ö×ø±ê£º");
 	while (win<row*col-COUNT)//Ñ­»·ÖÕÖ¹Ìõ¼ş£ºÉ¨³öµÄÀ×µÈÓÚ²¼ÏÂµÄÀ×£»
 	{
@@ -122,12 +123,30 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)//¿
 				DisplayBoard(show, ROW, COL);
 				//DisplayBoard(mine, ROW, COL);//ÕıÊ½ÓÎÏ·²»±Ø´òÓ¡´æ·ÅÀ×µÄĞÅÏ¢£»´ËÌõÓï¾ä²»ÓÃ´òÓ¡
 				printf("--------------------------------\n");
-				printf("ÇëÑ¡Ôñ×ßÏÂÒ»²½ --> ");
+				do
+				{
+					printf("ÇëÑ¡Ôñ1»òÕß0Ñ¡Ôñ±ê¼ÇÀ×µã»òÕß½Ó×Å×ßÏÂÒ»²½->\n");
+					scanf("%d", &input);
+						switch (input)
+					{
+						case 1:
+							RemarkBoard(show, row, col);
+							DisplayBoard(show, ROW, COL);
+							break;
+						case 0:
+							printf("ÇëÑ¡Ôñ×ßÏÂÒ»²½ --> ");
+							break;
+						default:
+							printf("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë£¡ ->");
+							break;
+					}	
+				} while (input);	
 				win++;
 			}
 		    else if (mine[x][y] == '1')
 			{
 				printf("You was died !!!!\n");
+				DisplayBoard(mine, ROW, COL);
 				printf("ÇëÖØĞÂÑ¡Ôñ1»òÕß0¿ªÊ¼»òÕß½áÊøÓÎÏ·£º->  ");
 				break;
 			}
@@ -140,7 +159,25 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)//¿
 				DisplayBoard(show, ROW, COL);
 				//DisplayBoard(mine, ROW, COL); ÕıÊ½ÓÎÏ·²»±Ø´òÓ¡´æ·ÅÀ×µÄĞÅÏ¢£»´ËÌõÓï¾ä²»ÓÃ´òÓ¡
 				printf("--------------------------------\n");
-				printf("ÇëÑ¡Ôñ×ßÏÂÒ»²½ --> ");
+				//printf("ÇëÑ¡Ôñ×ßÏÂÒ»²½ --> ");
+				do
+				{
+					printf("ÇëÑ¡Ôñ1»òÕß0Ñ¡Ôñ±ê¼ÇÀ×µã»òÕß½Ó×Å×ßÏÂÒ»²½->\n");
+					scanf("%d", &input);
+					switch (input)
+					{
+					case 1:
+						RemarkBoard(show, row, col);
+						DisplayBoard(show, ROW, COL);
+						break;
+					case 0:
+						printf("ÇëÑ¡Ôñ×ßÏÂÒ»²½ --> ");
+						break;
+					default:
+						printf("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë£¡ ->");
+						break;
+					}
+				} while (input);
 				win++;
 			}
 		}
@@ -172,7 +209,6 @@ void SpreadBoard(char mine[ROWS][COLS], char show[ROWS][COLS],int row,int col, i
 	count = GetMine(mine, x, y);
 	int i = 0;
 	int j = 0;
-
 	if (count == 0)
 	{
 		show[x][y] = ' ';
@@ -214,4 +250,31 @@ void SpreadBoard(char mine[ROWS][COLS], char show[ROWS][COLS],int row,int col, i
 		show[x][y] = count + '0';
 	}
 }
-	
+//±ê¼Çº¯ÊıRamarkBoard()£¬Õâ¸öº¯Êı´«²ÎÖ»´«Òª´òÓ¡¸øÍæ¼ÒµÄÄÇ¸öÆåÅÌ¾ÍĞĞ
+//Ò²¾ÍÊÇ³õÊ¼»¯È«ÊÇ×Ö·û'*'µÄÄÇ¸öÆåÅÌ£¬Íæ¼Ò×Ô¼º±ê¼ÇÁËºó¸Ã×ø±ê±ä³É¸ĞÌ¾ºÅ
+void RemarkBoard(char show[ROWS][COLS], int row, int col)//±ê¼Çº¯Êı£»
+{
+	int x = 0;
+	int y = 0;
+	int flag = 1;
+	printf("ÇëÊäÈëÄúÒª±ê¼ÇµÄ×ø±ê£º-> ");
+	scanf("%d %d", &x, &y);
+	while (flag)
+	{
+		if (x >= 1 && x <= 9 && y >= 1 && y <= 9)
+		{
+			if (show[x][y] == '*')
+			{
+				show[x][y] = '!';
+				flag = 0;
+			}
+		}
+		else
+		{
+			printf("ÊäÈë´íÎó£¬ÖØĞÂÊäÈë£¡");
+		}
+	}
+}
+//±¾³ÌĞò»¹ÊÇÓĞ¸öbug£º¾ÍÊÇÍæ¼Ò¿ÉÒÔ¼ÌĞø×ßÒÑ¾­±ê¼ÇµÄÄÇÒ»²½Æå£¬ÓÎÏ·ÒÀ¾É»áÅĞ¶ÏÊÇ·ñ²ÈÀ×
+//ÓÎÏ·ÒÀ¾É°´ÕÕmineÆåÅÌ£¬Ò²¾ÍÊÇ´æ´¢À×µÄĞÅÏ¢µÄÄÇ¸öÆåÅÌ£»
+//Õâ¸öbug......ÓÎÏ·Î´Íê´ıĞø......
