@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C18B78A5-5010-45FF-BD88-EFCE560C2AA8}</ProjectGuid>
-    <RootNamespace>Program27：对10个数进行排序</RootNamespace>
+    <ProjectGuid>{1A48832B-0282-4E6A-AE7A-B0F41586F0DB}</ProjectGuid>
+    <RootNamespace>Program29：求一个3乘3矩阵对角线元素之和</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
