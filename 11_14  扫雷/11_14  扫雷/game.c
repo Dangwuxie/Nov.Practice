@@ -41,11 +41,10 @@ void game()
 	DisplayBoard(show, ROW, COL);
 	printf("--------------------------------\n");
 	FindMine(mine, show, ROW, COL);//开始扫雷
-	/*printf("--------------------------------\n");
-	DisplayBoard(mine, ROW, COL);
-	DisplayBoard(show, ROW, COL);
-	printf("--------------------------------\n");
-*/
+//	printf("--------------------------------\n");
+//	DisplayBoard(mine, ROW, COL);
+//	DisplayBoard(show, ROW, COL);
+//	printf("--------------------------------\n");
 }
 void InitBoard(char board[ROWS][COLS], int rows, int cols, char ret)//这里的形参rows\cols,区别：
 //初始化是初始化11*11的棋盘，全部初始化为接收到的字符
