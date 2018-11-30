@@ -37,7 +37,7 @@ void game()
 	InitBoard(mine, ROWS, COLS, '0');//mine棋盘81个字符全部初始化为字符0；
 	InitBoard(show, ROWS, COLS, '*');//show棋盘全部初始化为字符‘*’（玩家看到的只有*）
 	SetMine(mine, ROW, COL);//放入雷的信息，雷只保存在mine棋盘中；
-	//DisplayBoard(mine, ROW, COL);////正式游戏不必打印存放雷的信息；此条语句不用打印
+	DisplayBoard(mine, ROW, COL);////正式游戏不必打印存放雷的信息；此条语句不用打印
 	DisplayBoard(show, ROW, COL);
 	printf("--------------------------------\n");
 	FindMine(mine, show, ROW, COL);//开始扫雷
@@ -211,38 +211,51 @@ void SpreadBoard(char mine[ROWS][COLS], char show[ROWS][COLS],int row,int col, i
 	if (count == 0)
 	{
 		show[x][y] = ' ';
-		if (x + 1 <= row && y - 1 > 0 && show[x + 1][y - 1] == '*')
+		int a = 0;
+		int b = 0;
+		for ( a = -1; a <= 1; a++)
 		{
-			SpreadBoard(mine, show, row, col, x + 1, y - 1);
+			for ( b = -1; b <= 1; b++)
+			{
+				if ((x+a)>0 && (x+a)<=row && (y+b)>0 && (y+b)<=col && show[x+a][y+b]=='*')
+				{
+					SpreadBoard(mine, show, row, col, x + a, y + b);
+				}
+			}
 		}
-		if (x + 1 <= row && show[x + 1][y] == '*')
-		{
-			SpreadBoard(mine, show, row, col, x + 1, y);
-		}
-		if (x + 1 <= row && y + 1 <= col && show[x + 1][y + 1] == '*')
-		{
-			SpreadBoard(mine, show, row, col, x + 1, y + 1);
-		}
-		if (y - 1 > 0 && show[x][y - 1] == '*')
-		{
-			SpreadBoard(mine, show, row, col, x, y - 1);
-		}
-		if (y + 1 <= col &&show[x][y + 1] == '*')
-		{
-			SpreadBoard(mine, show, row, col, x, y + 1);
-		}
-		if (x - 1 > 0 && y - 1 > 0 && show[x - 1][y - 1] == '*')
-		{
-			SpreadBoard(mine, show, row, col, x - 1, y - 1);
-		}
-		if (x - 1 > 0 && show[x - 1][y] == '*')
-		{
-			SpreadBoard(mine, show, row, col, x - 1, y);
-		}
-		if (x - 1 > 0 && y + 1 <= col && show[x - 1][y + 1] == '*')
-		{
-			SpreadBoard(mine, show, row, col, x - 1, y + 1);
-		}
+		///*show[x][y] = ' ';
+		//if (x + 1 <= row && y - 1 > 0 && show[x + 1][y - 1] == '*')
+		//{
+		//	SpreadBoard(mine, show, row, col, x + 1, y - 1);
+		//}
+		//if (x + 1 <= row && show[x + 1][y] == '*')
+		//{
+		//	SpreadBoard(mine, show, row, col, x + 1, y);
+		//}
+		//if (x + 1 <= row && y + 1 <= col && show[x + 1][y + 1] == '*')
+		//{
+		//	SpreadBoard(mine, show, row, col, x + 1, y + 1);
+		//}
+		//if (y - 1 > 0 && show[x][y - 1] == '*')
+		//{
+		//	SpreadBoard(mine, show, row, col, x, y - 1);
+		//}
+		//if (y + 1 <= col &&show[x][y + 1] == '*')
+		//{
+		//	SpreadBoard(mine, show, row, col, x, y + 1);
+		//}
+		//if (x - 1 > 0 && y - 1 > 0 && show[x - 1][y - 1] == '*')
+		//{
+		//	SpreadBoard(mine, show, row, col, x - 1, y - 1);
+		//}
+		//if (x - 1 > 0 && show[x - 1][y] == '*')
+		//{
+		//	SpreadBoard(mine, show, row, col, x - 1, y);
+		//}
+		//if (x - 1 > 0 && y + 1 <= col && show[x - 1][y + 1] == '*')
+		//{
+		//	SpreadBoard(mine, show, row, col, x - 1, y + 1);
+		//}*/
 	}
 	else
 	{
